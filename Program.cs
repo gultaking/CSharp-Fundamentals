@@ -1,3 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using CSharpFundamentals.Lesson2;
 
-Console.WriteLine("Hello, World!");
+Task1 task1 = new Task1();
+task1.GetRectangleAreaTest();

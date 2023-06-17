@@ -1,0 +1,9 @@
+1. Write a program that takes input for the length and width of a rectangle and calculates its area.
+2. Write a program that converts temperatures between Fahrenheit and Celsius.
+3. Write a program that takes input for three test scores and calculates the average grade.
+4. Write a program that converts an amount in one currency to another currency.
+5. Write a program that swaps the values of two variables without using a temporary variable.
+6. Write a program that calculates the Body Mass Index (BMI = kg/height^2) based on user input for weight (in kilograms) and height (in meters).
+7. Write a program that converts a distance in kilometers to miles and vice versa.
+8. Write a program that converts time given in seconds to hours, minutes, and seconds.
+9. Write a program that calculates the total amount in a bank account after a given number of years with a specified interest rate.
