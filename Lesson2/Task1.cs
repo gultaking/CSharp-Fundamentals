@@ -22,7 +22,7 @@ public class Task1
         try
         {
             Console.WriteLine("Test started!");
-            
+
             Console.Write("Enter length: ");
             double length = Convert.ToDouble(Console.ReadLine());
 
