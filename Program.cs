@@ -4,4 +4,7 @@
 //task1.GetRectangleAreaTest();
 
 Task2 task2 = new Task2();
-task2. CelsiusToFahrenheitConversion();
+
+task2.CelsiusToFahrenheitTests();
+
+task2.FahrenheitToCelsiusTests();
