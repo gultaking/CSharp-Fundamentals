@@ -9,5 +9,10 @@
 
 //task2.FahrenheitToCelsiusTests();
 
-Task3 task3 = new Task3();
-task3.FindAverageGradeTest();
+//Task3 task3 = new Task3();
+//task3.FindAverageGradeTest();
+
+Task4 task4 = new Task4();
+task4.ExchangeManatDollarTests();
+task4.ExchangeManatRubleTests();
+task4.ExchangeManatEuroTests();
