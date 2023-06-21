@@ -3,8 +3,11 @@
 //Task1 task1 = new Task1();
 //task1.GetRectangleAreaTest();
 
-Task2 task2 = new Task2();
+//Task2 task2 = new Task2();
 
-task2.CelsiusToFahrenheitTests();
+//task2.CelsiusToFahrenheitTests();
 
-task2.FahrenheitToCelsiusTests();
+//task2.FahrenheitToCelsiusTests();
+
+Task3 task3 = new Task3();
+task3.FindAverageGradeTest();
