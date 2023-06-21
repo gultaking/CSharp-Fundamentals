@@ -106,7 +106,7 @@ class Task4
         }
     }
 
-    public void ExchangeManatEuroTest()
+    public void ExchangeManatEuroTests()
     {
         try
         {

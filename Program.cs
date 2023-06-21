@@ -15,4 +15,4 @@
 Task4 task4 = new Task4();
 task4.ExchangeManatDollarTests();
 task4.ExchangeManatRubleTests();
-task4.ExchangeManatEuroTest();
+task4.ExchangeManatEuroTests();
