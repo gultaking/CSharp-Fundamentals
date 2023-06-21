@@ -16,7 +16,6 @@ public class Task1
 
         return length * width;
     }
-
     public void GetRectangleAreaTest()
     {
         try
