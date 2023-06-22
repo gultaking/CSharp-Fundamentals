@@ -12,7 +12,10 @@
 //Task3 task3 = new Task3();
 //task3.FindAverageGradeTest();
 
-Task4 task4 = new Task4();
-task4.ExchangeManatDollarTests();
-task4.ExchangeManatRubleTests();
-task4.ExchangeManatEuroTests();
+//Task4 task4 = new Task4();
+//task4.ExchangeManatDollarTests();
+//task4.ExchangeManatRubleTests();
+//task4.ExchangeManatEuroTests();
+
+Task5 task5 = new Task5();
+task5.ReplaceValueVariableTests();
