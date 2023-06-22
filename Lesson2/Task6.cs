@@ -1,12 +1,16 @@
 namespace CSharpFundamentals.Lesson2;
-
 class Task6
 {
     public double CalculateBodyMassIndex(double kilograms, double heigth)
     {
-        if (kilograms <= 0 || heigth <= 0)
+        if (kilograms <= 0)
         {
-            throw new Exception("Kilograms and heigth cannot be zero or negative!");
+            throw new Exception("Kilograms cannot be zero or negative!");
+        }
+
+        if (heigth <= 0)
+        {
+            throw new Exception("Heigth cannot be zero or negative!");
         }
 
         return kilograms / Math.Pow(heigth, 2);
