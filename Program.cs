@@ -17,5 +17,8 @@
 //task4.ExchangeManatRubleTests();
 //task4.ExchangeManatEuroTests();
 
-Task5 task5 = new Task5();
-task5.ReplaceValueVariableTests();
+//Task5 task5 = new Task5();
+//task5.ReplaceValueVariableTests();
+
+Task6 task6 = new Task6();
+task6.CalculateBodyMassIndexTests();
