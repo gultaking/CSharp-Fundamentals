@@ -23,5 +23,8 @@
 //Task6 task6 = new Task6();
 //task6.CalculateBodyMassIndexTests();
 
-Task7 task7 = new Task7();
-task7.MilesToKilometersTests();
+//Task7 task7 = new Task7();
+//task7.MilesToKilometersTests();
+
+Task8 task8 = new Task8();
+task8.ExchangeSecondsTests();

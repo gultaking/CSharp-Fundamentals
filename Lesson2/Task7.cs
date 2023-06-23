@@ -28,13 +28,13 @@ class Task7
         {
             Console.Write("Enter miles: ");
             double miles = Convert.ToDouble(Console.ReadLine());
-            double milesResult = ConvertMilesToKilometers(miles);
-            Console.WriteLine("Miles to kilometers converter: " + milesResult);
+            double kilometersResult = ConvertMilesToKilometers(miles);
+            Console.WriteLine("Miles to kilometers converter: " + kilometersResult);
 
             Console.Write("Enter kilometers: ");
             double kilometers = Convert.ToDouble(Console.ReadLine());
-            double kilometersResult = ConvertKilometersToMiles(kilometers);
-            Console.WriteLine("Kilometers to miles converter: " + kilometersResult);
+            double milesResult = ConvertKilometersToMiles(kilometers);
+            Console.WriteLine("Kilometers to miles converter: " + milesResult);
         }
         catch (Exception e)
         {
