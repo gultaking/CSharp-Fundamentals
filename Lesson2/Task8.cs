@@ -9,7 +9,7 @@ class Task8
             throw new Exception("Seconds cannot be negative!");
         }
 
-        return secondsToMinutes / 60;
+        return secondsToMinutes / 60.0;
     }
 
     public double ConvertSecondsToHours(double secondsToHours)
@@ -29,7 +29,7 @@ class Task8
             throw new Exception("Minutes cannot be negative!");
         }
 
-        return minutesToSecond * 60;
+        return minutesToSecond * 60.0;
     }
 
     public double ConvertMinutesToHours(double minutesToHours)
@@ -39,7 +39,7 @@ class Task8
             throw new Exception("Minutes cannot be negative!");
         }
 
-        return minutesToHours / 60;
+        return minutesToHours / 60.0;
     }
 
     public double ConvertHourseToSeconds(double hourseToSeconds)
@@ -59,7 +59,7 @@ class Task8
             throw new Exception("Hourse cannot be negative");
         }
 
-        return hourseToMinutes * 60;
+        return hourseToMinutes * 60.0;
     }
 
     public void ExchangeSecondsTests()
