@@ -19,7 +19,7 @@ class Task8
             throw new Exception("Seconds cannot be negative!");
         }
 
-        return secondsToHours / 3600;
+        return secondsToHours / 3600.0;
     }
 
     public double ConvertMinutesToSeconds(double minutesToSecond)
@@ -49,7 +49,7 @@ class Task8
             throw new Exception("Hourse cannot be negative!");
         }
 
-        return hourseToSeconds * 36000;
+        return hourseToSeconds * 36000.0;
     }
 
     public double ConvertHourseToMinutes(double hourseToMinutes)
