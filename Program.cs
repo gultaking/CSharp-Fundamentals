@@ -28,3 +28,5 @@
 
 Task8 task8 = new Task8();
 task8.ExchangeSecondsTests();
+task8.ExchangeMinutesTests();
+task8.ExchangeHourseTests();
