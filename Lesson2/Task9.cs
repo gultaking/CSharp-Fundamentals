@@ -31,11 +31,21 @@ class Task9
 
     public double CalculateAmountBank(double amount, double percentage, int year)
     {
-        if (amount <= 0 || percentage <= 0 || year <= 0)
+        if (amount <= 0)
         {
-            throw new Exception("Amount, percentage and year cannot be zero or negative!");
+            throw new Exception("Amount cannot be zero or negative!");
+        }
+        
+        if (percentage <= 0)
+        {
+            throw new Exception("Persentage cannot be zero or negative!");
         }
 
+        if (year <= 0)
+        {
+            throw new Exception("Year cannot be zero or negative!");
+        }
+        
         double amountPercentage = (amount / 100) * percentage;
         return amountPercentage * year;
     }
