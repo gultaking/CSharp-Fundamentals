@@ -32,4 +32,4 @@
 //task8.ExchangeHourseTests();
 
 Task9 task9 = new Task9();
-task9.CalculateAmountBank();
+task9.CalculateAmountBankTests();

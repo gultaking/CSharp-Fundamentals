@@ -1,23 +1,42 @@
+using Microsoft.VisualBasic;
+
 namespace CSharpFundamentals.Lesson2;
 
 class Task9
 {
-    public void CalculateAmountBank()
+    public void CalculateAmountBankTests()
     {
-        Console.WriteLine("Calculate the amount in the bank account with anual interest.");
+        try
+        {
+            Console.WriteLine("Calculate the amount in the bank account with anual interest.");
 
-        Console.Write("Enter amount: ");
-        double amount = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter amount: ");
+            double amount = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Enter the annual percentage rate: ");
-        double percentage = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter the annual percentage rate: ");
+            double percentage = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Enter year: ");
-        double year = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter year: ");
+            int year = Convert.ToInt32(Console.ReadLine());
 
-        double amountPercentage = amount / 100 * percentage;
-        double result = amountPercentage * year;
+            double result = CalculateAmountBank(amount, percentage, year);
+            Console.WriteLine("Amount in the bank at annual interest: " + result);
+        }
 
-        Console.WriteLine("Amount in the bank at annual interest: " + result);
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+
+    public double CalculateAmountBank(double amount, double percentage, int year)
+    {
+        if (amount <= 0 || percentage <= 0 || year <= 0)
+        {
+            throw new Exception("Amount, percentage and year cannot be zero or negative!");
+        }
+
+        double amountPercentage = (amount / 100) * percentage;
+        return amountPercentage * year;
     }
 }
