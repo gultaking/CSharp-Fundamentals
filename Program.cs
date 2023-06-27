@@ -26,7 +26,10 @@
 //Task7 task7 = new Task7();
 //task7.MilesToKilometersTests();
 
-Task8 task8 = new Task8();
-task8.ExchangeSecondsTests();
-task8.ExchangeMinutesTests();
-task8.ExchangeHourseTests();
+//Task8 task8 = new Task8();
+//task8.ExchangeSecondsTests();
+//task8.ExchangeMinutesTests();
+//task8.ExchangeHourseTests();
+
+Task9 task9 = new Task9();
+task9.CalculateAmountBankTests();
