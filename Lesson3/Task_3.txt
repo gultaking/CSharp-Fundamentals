@@ -1,0 +1,11 @@
+1. Write a program that takes an integer as input and checks if it is even or odd. Print "Even" or "Odd" based on the input.
+2. Write a program that prompts the user to enter their age. Print "You are an adult" if the age is above 18, otherwise, print "You are a minor."
+3. Write a program that checks if a given year is a leap year. If it is, print "Leap year" Otherwise, print "Not a leap year".
+4. Write a program that takes a day of the week as input (e.g., 1 for Monday, 2 for Tuesday) and prints the corresponding day's name.
+5. Write a program that asks the user to enter a grade (A, B, C, D, or F) and provides a corresponding message
+    based on the grade (e.g., "Excellent!", "Good job!", "Average", "Needs improvement", "Fail").
+6. Write a program that takes three numbers as input and prints the largest number among them.
+7. Write a program that asks the user to enter a character and checks if it is a vowel (a, e, i, o, u) or a consonant.
+8. Write a program that prompts the user to enter a month number (1-12) and displays the number of days in that month.
+9. Write a program that takes an integer as input and checks if it is positive, negative, or zero.
+10. Write a program that takes the lengths of its sides of triangle and find the type of triangle (equilateral, isosceles, or scalene).
