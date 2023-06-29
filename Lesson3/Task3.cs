@@ -2,23 +2,34 @@ namespace CSharpFundamentals.Lesson3;
 
 public class Task3
 {
-    public void CalculatingLeapYear(int year)
+    bool IsLeapYear(int year)
     {
-        if (year % 400 == 0) {
-            Console.Write(year + " is a leap year.");
-        } else if (year % 100 == 0) {
-            Console.Write(year + " is not a leap year.");
-        } else if (year % 4 == 0) {
-            Console.Write(year + " is a leap year.");
-        } else {
-            Console.Write(year + " is not a leap year.");
+        if (year <= 0)
+        {
+            throw new Exception("Year cannot be zero or negative!");
         }
+
+        if (year % 4 == 0)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public void CalculatingLeapYearTests()
     {
-        Console.Write("Enter year: ");
-        int year = Convert.ToInt32(Console.ReadLine());
-        CalculatingLeapYear(year);
+        try
+        {
+            Console.Write("Enter year: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            
+            bool isLeapYear = IsLeapYear(year);
+            Console.WriteLine(isLeapYear ? "Leap year! " : "Not a leap year");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }
