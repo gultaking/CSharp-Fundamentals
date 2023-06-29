@@ -2,22 +2,37 @@ namespace CSharpFundamentals.Lesson3;
 
 public class Task2
 {
-    public void PrintAge(int age)
+    bool IsAdultPerson(int age)
     {
+        if (age < 0)
+        {
+            throw new Exception("Age must be positive or zero!");
+        }
+
         if (age > 18)
         {
-            Console.WriteLine("You are an adult!");
+            return true;
         }
-        else
-        {
-            Console.WriteLine("You are a minor");
-        }
+
+        return false;
     }
 
     public void PrintAgeTests()
     {
-        Console.Write("Enter your age: ");
-        int age = Convert.ToInt32(Console.ReadLine());
-        PrintAge(age);
+        try
+        {
+            Console.WriteLine("PrintAgeTests started!");
+
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            bool isAdult = IsAdultPerson(age);
+            Console.WriteLine(isAdult ? "You are an adult!" : "You are a minor");
+
+            Console.WriteLine("PrintAgeTests ended!");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 }
