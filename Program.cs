@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson3;
 
-Task4 task4 = new Task4();
-task4.WeekDaysTests();
+Task5 task5 = new Task5();
+task5.GradeTests();
