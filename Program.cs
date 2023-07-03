@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson3;
 
-Task6 task6 = new Task6();
-task6.FindMaxTests();
+Task7 task7 = new Task7();
+task7.FindCharacterTest();
