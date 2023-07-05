@@ -40,8 +40,8 @@ public class Task8
             Console.Write("Enter month number: ");
             int month = Convert.ToInt32(Console.ReadLine());
 
-            int monthResult = GetDayCountOfMonth(month);
-            Console.WriteLine("There are {0} days in the {1}st month", monthResult, month);
+            int dayCount = GetDayCountOfMonth(month);
+            Console.WriteLine("There are {0} days in the {1}st month", dayCount, month);
         }
         catch (Exception e)
         {
