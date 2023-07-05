@@ -2,14 +2,16 @@ namespace CSharpFundamentals.Lesson3;
 
 public class Task8
 {
-    public int FindMonthDate(int month)
+    public int DaysOfMonth(int month)
     {
+        int dayCount = month;
+
         if (month < 1 || month > 12)
         {
             throw new Exception("Month cannot be less than 1 or more than 12!");
         }
 
-        switch (month)
+        switch (dayCount)
         {
             case 1: return 31;
             case 2: return 28;
@@ -25,18 +27,18 @@ public class Task8
             case 12: return 31;
         }
 
-        return month;
+        return dayCount;
     }
 
-    public void FindMonthDateTests()
+    public void DaysOfMonthTests()
     {
         try
         {
             Console.Write("Enter month number: ");
-            int date = Convert.ToInt32(Console.ReadLine());
+            int month = Convert.ToInt32(Console.ReadLine());
 
-            int result = FindMonthDate(date);
-            Console.WriteLine(result + " day in month {0}", date);
+            int monthResult = DaysOfMonth(month);
+            Console.WriteLine("There are {0} days in the {1}st month", monthResult, month);
         }
         catch (Exception e)
         {
