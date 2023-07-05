@@ -4,12 +4,7 @@ public class Task8
 {
     public int GetDayCountOfMonth(int month)
     {
-        int dayCount = 1;
-
-        if (month < 1 || month > 12)
-        {
-            throw new Exception("Month cannot be less than 1 or more than 12!");
-        }
+        int dayCount;
 
         switch (month)
         {
@@ -31,6 +26,8 @@ public class Task8
             case 11:
                 dayCount = 30;
                 break;
+            default:
+                throw new Exception("Month cannot be less than 1 or more than 12");
         }
 
         return dayCount;
