@@ -2,7 +2,7 @@ namespace CSharpFundamentals.Lesson3;
 
 public class Task8
 {
-    public int DaysOfMonth(int month)
+    public int GetDayCountOfMonth(int month)
     {
         int dayCount = 1;
 
@@ -36,14 +36,14 @@ public class Task8
         return dayCount;
     }
 
-    public void DaysOfMonthTests()
+    public void GetDayCountOfMonthTests()
     {
         try
         {
             Console.Write("Enter month number: ");
             int month = Convert.ToInt32(Console.ReadLine());
 
-            int monthResult = DaysOfMonth(month);
+            int monthResult = GetDayCountOfMonth(month);
             Console.WriteLine("There are {0} days in the {1}st month", monthResult, month);
         }
         catch (Exception e)
