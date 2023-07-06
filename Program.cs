@@ -4,4 +4,4 @@
 //task9.SignumTests();
 
 Task10 task10 = new Task10();
-task10.GetTypeTriangleTests();
+task10.GetTriangleTypeTests();
