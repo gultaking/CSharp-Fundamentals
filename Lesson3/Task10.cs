@@ -6,23 +6,31 @@ public class Task10
     {
         Equilateral,
         Isosceles,
-        Scalene
+        Scalene,
+        Triangle
     }
 
-    public TriangleType GetTriangleType(int side1, int side2, int side3)
+    public TriangleType GetTriangleType(double side1, double side2, double side3)
     {
         if (side1 <= 0 || side2 <= 0 || side3 <= 0)
         {
             throw new Exception("The sides of a triangle cannot be negative!");
         }
 
-        if (side1 == side2 && side1 == side3 && side2 == side3)
+        else if (side1 == side2 && side1 == side3 && side2 == side3)
         {
             return TriangleType.Equilateral;
         }
+
         else if (side1 == side2 || side2 == side3 || side1 == side3)
         {
             return TriangleType.Isosceles;
+        }
+
+        else if (side1 + side2 > side3 || side1 + side3 > side2 || side2 + side3 > side1 ||
+                 Math.Abs(side1 - side2) < side3 || Math.Abs(side1 - side3) < side2 || Math.Abs(side2 - side3) < side1)
+        {
+            return TriangleType.Triangle;
         }
 
         return TriangleType.Scalene;
@@ -33,13 +41,13 @@ public class Task10
         try
         {
             Console.Write("Enter side a triangle: ");
-            int side1 = Convert.ToInt32(Console.ReadLine());
+            double side1 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Enter side b triangle: ");
-            int side2 = Convert.ToInt32(Console.ReadLine());
+            double side2 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Enter side c triangle: ");
-            int side3 = Convert.ToInt32(Console.ReadLine());
+            double side3 = Convert.ToDouble(Console.ReadLine());
 
             object result = GetTriangleType(side1, side2, side3);
 
