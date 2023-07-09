@@ -6,31 +6,34 @@ public class Task10
     {
         Equilateral,
         Isosceles,
-        Scalene,
-        Triangle
+        Scalene
     }
 
     public TriangleType GetTriangleType(double side1, double side2, double side3)
     {
         if (side1 <= 0 || side2 <= 0 || side3 <= 0)
         {
-            throw new Exception("The sides of a triangle cannot be negative!");
+            throw new Exception("The sides of a triangle cannot be zero or negative!");
         }
 
-        else if (side1 == side2 && side1 == side3 && side2 == side3)
+        if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1 ||
+            Math.Abs(side1 - side2) < side3 && Math.Abs(side1 - side3) < side2 && Math.Abs(side2 - side3) < side1)
         {
-            return TriangleType.Equilateral;
+            //throw new Exception("This is a not triangle!");
+            if (side1 == side2 && side1 == side3 && side2 == side3)
+            {
+                return TriangleType.Equilateral;
+            }
+
+            if (side1 == side2 || side2 == side3 || side1 == side3)
+            {
+                return TriangleType.Isosceles;
+            }
         }
 
-        else if (side1 == side2 || side2 == side3 || side1 == side3)
+        else
         {
-            return TriangleType.Isosceles;
-        }
-
-        else if (side1 + side2 > side3 || side1 + side3 > side2 || side2 + side3 > side1 ||
-                 Math.Abs(side1 - side2) < side3 || Math.Abs(side1 - side3) < side2 || Math.Abs(side2 - side3) < side1)
-        {
-            return TriangleType.Triangle;
+            throw new Exception("This is not triangle!");
         }
 
         return TriangleType.Scalene;
@@ -50,7 +53,6 @@ public class Task10
             double side3 = Convert.ToDouble(Console.ReadLine());
 
             object result = GetTriangleType(side1, side2, side3);
-
             Console.WriteLine("This triangle is an {0} triangle ", result);
         }
         catch (Exception e)
