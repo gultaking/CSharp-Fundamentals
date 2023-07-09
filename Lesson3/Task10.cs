@@ -6,8 +6,7 @@ public class Task10
     {
         Equilateral,
         Isosceles,
-        Scalene,
-        Triangle
+        Scalene
     }
 
     public TriangleType GetTriangleType(double side1, double side2, double side3)
