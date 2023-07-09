@@ -6,7 +6,8 @@ public class Task10
     {
         Equilateral,
         Isosceles,
-        Scalene
+        Scalene,
+        Triangle
     }
 
     public TriangleType GetTriangleType(double side1, double side2, double side3)
@@ -16,24 +17,20 @@ public class Task10
             throw new Exception("The sides of a triangle cannot be zero or negative!");
         }
 
-        if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1 ||
-            Math.Abs(side1 - side2) < side3 && Math.Abs(side1 - side3) < side2 && Math.Abs(side2 - side3) < side1)
+        if (!(side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1 &&
+              Math.Abs(side1 - side2) < side3 && Math.Abs(side1 - side3) < side2 && Math.Abs(side2 - side3) < side1))
         {
-            //throw new Exception("This is a not triangle!");
-            if (side1 == side2 && side1 == side3 && side2 == side3)
-            {
-                return TriangleType.Equilateral;
-            }
-
-            if (side1 == side2 || side2 == side3 || side1 == side3)
-            {
-                return TriangleType.Isosceles;
-            }
+            throw new Exception("This is not Triangle!");
         }
 
-        else
+        if (side1 == side2 && side1 == side3 && side2 == side3)
         {
-            throw new Exception("This is not triangle!");
+            return TriangleType.Equilateral;
+        }
+
+        if (side1 == side2 || side2 == side3 || side1 == side3)
+        {
+            return TriangleType.Isosceles;
         }
 
         return TriangleType.Scalene;
