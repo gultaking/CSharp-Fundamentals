@@ -15,16 +15,15 @@ public class Task10
         {
             throw new Exception("The sides of a triangle cannot be zero or negative!");
         }
-
-        if ((side1 + side2 > side3 || side1 + side3 > side2 || side2 + side3 > side1 ||
-             Math.Abs(side1 - side2) < side3 || Math.Abs(side1 - side3) < side2 ||
-             Math.Abs(side2 - side3) < side1) && (side1 + side2 < side3 || side1 + side3 < side2 || side2 + side3 < 0 ||
-                                                  Math.Abs(side1 - side2) > side3 || Math.Abs(side1 - side3) > side2 ||
-                                                  Math.Abs(side2 - side3) > side1))
+         
+        // a+b>c, a+c>b, b+c>a
+        // |a-b|<c, |a-c|<b, |b-c|<c 
+        if (side1 + side2 <= side3 || side1 + side3 <= side3 || side2 + side3 <= side1 
+            || Math.Abs(side1 - side2) >= side3 || Math.Abs(side1 - side3) >= side2 || Math.Abs(side2 - side3) >= side2)
         {
-            throw new Exception("This is not Triangle!");
+            throw new Exception("This is not a Triangle!");
         }
-
+        
         if (side1 == side2 && side1 == side3 && side2 == side3)
         {
             return TriangleType.Equilateral;
