@@ -1,4 +1,4 @@
-﻿using CSharpFundamentals.Lesson3;
+﻿using CSharpFundamentals.Lesson4;
 
-Task10 task10 = new Task10();
-task10.GetTriangleTypeTests();
+Task1 task1 = new Task1();
+task1.PrintArrayElementTests();
