@@ -4,10 +4,13 @@ public class Task1
 {
     public void PrintArrayElementTests()
     {
-        int[] arrayElements = new int[10];
+        Console.Write("Enter the size of the arrays elements: ");
+        int sizeOfElements = Convert.ToInt32(Console.ReadLine());
+
+        int[] arrayElements = new int[sizeOfElements];
 
         int i;
-        for (i = 1; i <= arrayElements.Length; i++)
+        for (i = 0; i < arrayElements.Length; i++)
         {
             Console.Write("Insert the elements of the array {0}: ", i);
             arrayElements[i] = Convert.ToInt32(Console.ReadLine());
