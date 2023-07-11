@@ -12,13 +12,13 @@ public class Task1
             throw new Exception("The size of array elements cannot be negative!");
         }
 
-        double[] arrayElements = new Double[sizeOfElements];
+        double[] arrayElements = new double [sizeOfElements];
 
         int i;
         for (i = 0; i < arrayElements.Length; i++)
         {
             Console.Write("Insert the elements of the array {0}: ", i);
-            arrayElements[i] = Convert.ToInt32(Console.ReadLine());
+            arrayElements[i] = Convert.ToDouble(Console.ReadLine());
         }
 
         PrintArrayElements(arrayElements);
