@@ -14,8 +14,7 @@ public class Task1
 
         double[] arrayElements = new double [sizeOfElements];
 
-        int i;
-        for (i = 0; i < arrayElements.Length; i++)
+        for (int i = 0; i < arrayElements.Length; i++)
         {
             Console.Write("Insert the elements of the array {0}: ", i);
             arrayElements[i] = Convert.ToDouble(Console.ReadLine());
