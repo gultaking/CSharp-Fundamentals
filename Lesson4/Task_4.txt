@@ -1,0 +1,22 @@
+1. Write a program that stores elements in an array and prints them.
+2. Write a program to read n values in an array and display them in reverse order.
+3. Write a program to find the sum of all array elements.
+4. Write a program to copy the elements of one array into another array.
+5. Write a program in to count duplicate elements in an array.
+6. Write a program to print all unique elements in an array.
+7. Write a program to merge two arrays of the same size sorted in ascending order.
+8. Write a program to count the frequency of each element in an array.
+9. Write a program to find the maximum and minimum elements in an array.
+10. Write a program to separate odd and even integers into separate arrays.
+11. Write a program to sort elements of an array in ascending order.
+12. Write a program to sort array elements in descending order.
+13. Write a program to delete an element at the desired position from an array.
+14. Write a program to find the second-largest element in an array.
+15. Write a program to find the second-smallest element in an array.
+16. Write a program for a 2D array of size 3x3 and print the matrix.
+17. Write a program for adding two matrices of the same size.
+18. Write a program for the subtraction of two matrices of the same size.
+19. Write a program to find the sum of rows and columns in a matrix.
+20. Write a program to calculate the sum of the two lowest negative numbers in a given array of integers.
+21. Write a program that takes an array of integers and finds the smallest positive integer that is not present in that array.
+22. Write a program to find two numbers in an array of integers whose product is equal to a given number.
