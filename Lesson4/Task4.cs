@@ -18,17 +18,12 @@ public class Task4
 
         for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the elements of the array {0}:", i);
+            Console.Write("Insert the elements of the array {0}: " , i);
             array[i] = Convert.ToChar(Console.ReadLine());
         }
 
         CopyArrayElements(array, targetArray);
-
-        Console.WriteLine("The elements copied into the second array are");
-        for (int i = 0; i < length; i++)
-        {
-            Console.WriteLine(targetArray[i]);
-        }
+        PrintArrayElements(array, targetArray);
     }
 
     public void CopyArrayElements(char[] array, char[] targetArray)
@@ -37,5 +32,13 @@ public class Task4
         {
             targetArray[i] = array[i];
         }
+    }
+
+    public void PrintArrayElements(char[] array, char[] targetArray)
+    {
+        Console.Write("Elements of an array: ");
+        Console.Write(String.Join(",", array));
+        Console.Write("\nElements of the copied array: ");
+        Console.Write(String.Join(",", targetArray));
     }
 }
