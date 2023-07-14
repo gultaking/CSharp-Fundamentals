@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task3 task3 = new Task3();
-task3.GetSumOfArrayTests();
+Task4 task4 = new Task4();
+task4.CopyArrayElementsTests();
