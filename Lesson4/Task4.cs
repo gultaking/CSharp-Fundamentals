@@ -20,7 +20,7 @@ public class Task4
 
         for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the elements of the array {0}: " , i);
+            Console.Write("Insert the elements of the array {0}: ", i);
             array[i] = Convert.ToChar(Console.ReadLine());
         }
 
@@ -40,10 +40,14 @@ public class Task4
     public void PrintArrayElements(char[] array)
     {
         Console.Write("\nElements of an array: ");
-        
+
         for (int i = 0; i < array.Length; i++)
         {
-           Console.Write( array[i] + " , ");
+            if (i == array.Length-1)
+            {
+                Console.Write( array[i]+ " , ");
+            }
+            Console.Write(array[i]);
         }
     }
 }
