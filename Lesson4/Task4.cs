@@ -5,37 +5,37 @@ public class Task4
     public void CopyArrayElementsTests()
     {
         Console.Write("Enter the size of the array elements: ");
-        int arrayLength = Convert.ToInt32(Console.ReadLine());
+        int length = Convert.ToInt32(Console.ReadLine());
 
-        if (arrayLength <= 0)
+        if (length <= 0)
         {
             throw new Exception("The size of array elements cannot be negative or zero!");
         }
 
-        char[] deafaultArray = new char[arrayLength];
+        char[] array = new char[length];
 
-        char[] copyArray = new char[arrayLength];
+        char[] targetArray = new char[length];
 
-        for (int i = 0; i < arrayLength; i++)
+        for (int i = 0; i < length; i++)
         {
             Console.Write("Insert the elements of the array {0}:", i);
-            deafaultArray[i] = Convert.ToChar(Console.ReadLine());
+            array[i] = Convert.ToChar(Console.ReadLine());
         }
 
-        CopyArrayElements(deafaultArray, copyArray);
+        CopyArrayElements(array, targetArray);
 
         Console.WriteLine("The elements copied into the second array are");
-        for (int i = 0; i < arrayLength; i++)
+        for (int i = 0; i < length; i++)
         {
-            Console.WriteLine(copyArray[i]);
+            Console.WriteLine(targetArray[i]);
         }
     }
 
-    public void CopyArrayElements(char[] deafaultArray, char[] copyArray)
+    public void CopyArrayElements(char[] array, char[] targetArray)
     {
-        for (int i = 0; i < deafaultArray.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            copyArray[i] = deafaultArray[i];
+            targetArray[i] = array[i];
         }
     }
 }
