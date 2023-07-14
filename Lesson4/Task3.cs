@@ -2,35 +2,35 @@ namespace CSharpFundamentals.Lesson4;
 
 public class Task3
 {
-    public void SumAllArrayElements(double[] sumArrayElements)
+    public void GetSumOfArray(double[] array)
     {
-        double count = 0;
-        for (int i = 0; i < sumArrayElements.Length; i++)
+        double sum = 0;
+        for (int i = 0; i < array.Length; i++)
         {
-            count += sumArrayElements[i];
+            sum += array[i];
         }
 
-        Console.Write("\n Sum array elements: " + count);
+        Console.Write("\n Sum array elements: " + sum);
     }
 
-    public void SumAllArrayElemntsTests()
+    public void GetSumOfArrayTests()
     {
         Console.Write("Enter size of the array elements: ");
-        int arrayLength = Convert.ToInt32(Console.ReadLine());
+        int length = Convert.ToInt32(Console.ReadLine());
 
-        if (arrayLength <= 0)
+        if (length <= 0)
         {
             throw new Exception("The size of array elements cannot be negative or zero!");
         }
 
-        double[] sumArrayElements = new double[arrayLength];
+        double[] array = new double[length];
 
-        for (int i = 0; i < sumArrayElements.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
             Console.Write("Insert the elements of the array {0}: ", i);
-            sumArrayElements[i] = Convert.ToDouble(Console.ReadLine());
+            array[i] = Convert.ToDouble(Console.ReadLine());
         }
 
-        SumAllArrayElements(sumArrayElements);
+        GetSumOfArray(array);
     }
 }
