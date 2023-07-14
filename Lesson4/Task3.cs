@@ -2,7 +2,7 @@ namespace CSharpFundamentals.Lesson4;
 
 public class Task3
 {
-    public void GetSumOfArray(double[] array)
+    public double GetSumOfArray(double[] array)
     {
         double sum = 0;
         for (int i = 0; i < array.Length; i++)
@@ -10,7 +10,7 @@ public class Task3
             sum += array[i];
         }
 
-        Console.Write("\n Sum array elements: " + sum);
+        return sum;
     }
 
     public void GetSumOfArrayTests()
@@ -31,6 +31,7 @@ public class Task3
             array[i] = Convert.ToDouble(Console.ReadLine());
         }
 
-        GetSumOfArray(array);
-    }
+        double sum = GetSumOfArray(array);
+        Console.Write("Sum of array elements: " + sum);
+        }
 }
