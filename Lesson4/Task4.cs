@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic;
+
 namespace CSharpFundamentals.Lesson4;
 
 public class Task4
@@ -23,7 +25,8 @@ public class Task4
         }
 
         CopyArrayElements(array, targetArray);
-        PrintArrayElements(array, targetArray);
+        PrintArrayElements(array);
+        PrintArrayElements(targetArray);
     }
 
     public void CopyArrayElements(char[] array, char[] targetArray)
@@ -34,11 +37,13 @@ public class Task4
         }
     }
 
-    public void PrintArrayElements(char[] array, char[] targetArray)
+    public void PrintArrayElements(char[] array)
     {
-        Console.Write("Elements of an array: ");
-        Console.Write(String.Join(",", array));
-        Console.Write("\nElements of the copied array: ");
-        Console.Write(String.Join(",", targetArray));
+        Console.Write("\nElements of an array: ");
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+           Console.Write( array[i] + " , ");
+        }
     }
 }
