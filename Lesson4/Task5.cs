@@ -2,7 +2,7 @@ namespace CSharpFundamentals.Lesson4;
 
 public class Task5
 {
-    public void FindElementsIsRepeatedTests()
+    public void FindElementRepeatedCountTests()
     {
         Console.Write("Enter length the array's elements: ");
         int length = Convert.ToInt32(Console.ReadLine());
@@ -20,15 +20,15 @@ public class Task5
             array[i] = Convert.ToInt32(Console.ReadLine());
         }
 
-        Console.Write("Enter elemetn: ");
+        Console.Write("Enter element: ");
         int dublicatedValue = Convert.ToInt32(Console.ReadLine());
 
 
-        int repeatedResult = FindElementIsRepeated(array, dublicatedValue);
-        Console.Write("{0} is repeated {1} times", dublicatedValue, repeatedResult);
+        int repeatedElement = FindElementRepeatedCount(array, dublicatedValue);
+        Console.Write("{0} is repeated {1} times", dublicatedValue, repeatedElement);
     }
 
-    public int FindElementIsRepeated(int[] array, int dublicatedValue)
+    public int FindElementRepeatedCount(int[] array, int dublicatedValue)
 
     {
         int count = 0;
