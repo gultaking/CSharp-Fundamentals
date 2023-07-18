@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task6 task6 = new Task6();
-task6.FindUniqueElementTests();
+Task7 task7 = new Task7();
+task7.CreateAscendingOrderArrayTests();
