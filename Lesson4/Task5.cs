@@ -23,31 +23,22 @@ public class Task5
         Console.Write("Enter elements: ");
         int dublicateValue = Convert.ToInt32(Console.ReadLine());
 
-        int result = FindDublicate(array, dublicateValue);
-        Console.Write(result);
+        int result = FindDublicate(array);
+        Console.Write("{0} is repeated {1}", dublicateValue, result);
     }
 
-    public int FindDublicate(int[] array, int dublicateValue)
+    public int FindDublicate(int[] array)
     {
-        int[] targetArray = new int[array.Length];
-
         int count = 1;
-        
+
         for (int i = 0; i < array.Length; i++)
         {
-            
-            for (int j = i + 1; j < array.Length; j++)
+            for (int j = i + 1; j < array.Length - 1; j++)
             {
                 if (array[i] == array[j])
                 {
                     count++;
-                    targetArray[j] = 0;
                 }
-            }
-
-            if (targetArray[i] != 0)
-            {
-                targetArray[i] = count;
             }
         }
 
