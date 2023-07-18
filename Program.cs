@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task5 task5 = new Task5();
-task5.FindElementRepeatedCountTests();
+Task6 task6 = new Task6();
+task6.FindUniqueElementTests();
