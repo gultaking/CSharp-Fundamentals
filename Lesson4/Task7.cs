@@ -5,91 +5,83 @@ public class Task7
     public void CreateAscendingOrderArrayTests()
     {
         Console.Write("Enter length the first array elements: ");
-        int arrayLength = Convert.ToInt32(Console.ReadLine());
+        int length = Convert.ToInt32(Console.ReadLine());
 
-        if (arrayLength <= 0)
+        if (length <= 0)
         {
             throw new Exception("The size of array elements cannot be negative or zero!");
         }
 
-        int[] array = new int[arrayLength];
+        int[] array1 = new int[length];
         
-        for (int i = 0; i < arrayLength; i++)
+        for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the elements of the array {0}: ", i);
-            array[i] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Insert the element of the array {0}: ", i);
+            array1[i] = Convert.ToInt32(Console.ReadLine());
         }
 
-        Console.Write("Enter length the second array elements: ");
-        int mergedArrayLength = Convert.ToInt32(Console.ReadLine());
-
-        if (mergedArrayLength <= 0)
-        {
-            throw new Exception("The size of array elements cannot be negative or zero!");
-        }
+        Console.WriteLine("\nInsert the elements of the second array");
         
-        int[] mergedArray = new int[mergedArrayLength];
+        int[] array2 = new int[length];
 
-        for (int i = 0; i < mergedArrayLength; i++)
+        for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the elements of the array {0}: ", i);
-            mergedArray[i] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Insert the element of the array {0}: ", i);
+            array2[i] = Convert.ToInt32(Console.ReadLine());
         }
 
-        int concatArrayLength = arrayLength + mergedArrayLength;
-        int[] concatArray = new int[concatArrayLength];
+        int[] array3 = new int[length+length];
 
-        ConcatAndAscendingArray(array, mergedArray, concatArray);
+        ConcatAndAscendingArray(array1, array2, array3);
 
     }
 
-    public void ConcatAndAscendingArray(int[] array, int[] mergeArray, int[] concatArray)
+    public void ConcatAndAscendingArray(int[] array1, int[] array2, int[] array3)
     {
-        concatArray = new int [array.Length + mergeArray.Length];
+        array3 = new int [array1.Length + array2.Length];
 
         int i, j;
         
-        for ( i = 0; i < array.Length; i++)
+        for ( i = 0; i < array1.Length; i++)
         {
-            concatArray[i] = array[i];
+            array3[i] = array1[i];
         }
 
-        for ( j = 0; j < mergeArray.Length; j++)
+        for ( j = 0; j < array2.Length; j++)
         {
-            concatArray[i] = mergeArray[j];
+            array3[i] = array2[j];
             i++;
         }
-
-       
-        CreateAscendingOrderArray(concatArray);
+        
+        CreateAscendingOrderArray(array3);
     }
 
-    public void CreateAscendingOrderArray(int[] orderArray)
+    public void CreateAscendingOrderArray(int[] array)
     {
         int temp;
-        for (int i = 0; i < orderArray.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            for (int j = 0; j < orderArray.Length-1; j++)
+            for (int j = 0; j < array.Length-1; j++)
             {
-                if (orderArray[j] > orderArray[j+1])
+                if (array[j] > array[j+1])
                 {
-                    temp = orderArray[j];
-                    orderArray[j] = orderArray[j+1];
-                    orderArray[j+1] = temp;
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
                 }
             }
         }
 
         Console.Write("An array arranged in ascending order: ");
-        for (int i = 0; i < orderArray.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            if (i == orderArray.Length-1)
+            if (i == array.Length-1)
             {
-                Console.Write(orderArray[i]);
+                Console.Write(array[i]);
             }
             else
             {
-                Console.Write(orderArray[i] + ", ");
+                Console.Write(array[i] + ", ");
             }
         }
     }
