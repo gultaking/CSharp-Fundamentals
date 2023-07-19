@@ -12,6 +12,7 @@ public class Task7
             throw new Exception("The size of array elements cannot be negative or zero!");
         }
 
+        Console.WriteLine("\nInsert the elements of the first array");
         int[] array1 = new int[length];
 
         for (int i = 0; i < length; i++)
@@ -32,20 +33,8 @@ public class Task7
 
 
         int[] concatArray = ConcatArray(array1, array2);
-        int[] sortArray = SortArrayAscending(concatArray);
-
-        Console.Write("\nAn array arranged in ascending order: ");
-        for (int i = 0; i < sortArray.Length; i++)
-        {
-            if (i == sortArray.Length - 1)
-            {
-                Console.Write(sortArray[i]);
-            }
-            else
-            {
-                Console.Write(sortArray[i] + ", ");
-            }
-        }
+        SortArrayAscending(concatArray);
+        PrintSortingArray(concatArray);
     }
 
     public int[] ConcatArray(int[] array1, int[] array2)
@@ -68,7 +57,7 @@ public class Task7
         return array3;
     }
 
-    public int[] SortArrayAscending(int[] array)
+    public void SortArrayAscending(int[] array)
     {
         int temp;
         for (int i = 0; i < array.Length; i++)
@@ -83,7 +72,21 @@ public class Task7
                 }
             }
         }
+    }
 
-        return array;
+    public void PrintSortingArray(int[] array)
+    {
+        Console.Write("\nAn array arranged in ascending order: ");
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i == array.Length - 1)
+            {
+                Console.Write(array[i]);
+            }
+            else
+            {
+                Console.Write(array[i] + ", ");
+            }
+        }
     }
 }
