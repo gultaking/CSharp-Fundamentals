@@ -4,7 +4,7 @@ public class Task7
 {
     public void AscendingOrderArrayTests()
     {
-        Console.Write("Enter length the first array elements: ");
+        Console.Write("Enter length: ");
         int length = Convert.ToInt32(Console.ReadLine());
 
         if (length <= 0)
@@ -17,7 +17,7 @@ public class Task7
 
         for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the element of the array {0}: ", i);
+            Console.Write("Array1({0}): ", i);
             array1[i] = Convert.ToInt32(Console.ReadLine());
         }
 
@@ -27,56 +27,64 @@ public class Task7
 
         for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the element of the array {0}: ", i);
+            Console.Write("Array2({0}): ", i);
             array2[i] = Convert.ToInt32(Console.ReadLine());
         }
 
 
         int[] concatArray = ConcatArray(array1, array2);
+
+        Console.Write("Concat array: ");
+        PrintArray(concatArray);
+
         SortArrayAscending(concatArray);
-        PrintSortingArray(concatArray);
+
+        Console.Write("\nSorted array: ");
+        PrintArray(concatArray);
     }
 
-    public int[] ConcatArray(int[] array1, int[] array2)
+    int[] ConcatArray(int[] array1, int[] array2)
     {
-        int[] array3 = new int [array1.Length + array2.Length];
+        int[] concatArray = new int [array1.Length + array2.Length];
 
-        int i, j;
+        // int i, j;
+        //
+        // for (i = 0; i < array1.Length; i++)
+        // {
+        //     array3[i] = array1[i];
+        // }
+        //
+        // for (j = 0; j < array2.Length; j++)
+        // {
+        //     array3[i] = array2[j];
+        //     i++;
+        // }
 
-        for (i = 0; i < array1.Length; i++)
+        for (int i = 0; i < array1.Length; i++)
         {
-            array3[i] = array1[i];
+            concatArray[i] = array1[i];
+            concatArray[concatArray.Length - 1 - i] = array2[array2.Length - 1 - i];
         }
 
-        for (j = 0; j < array2.Length; j++)
-        {
-            array3[i] = array2[j];
-            i++;
-        }
-
-        return array3;
+        return concatArray;
     }
 
-    public void SortArrayAscending(int[] array)
+    void SortArrayAscending(int[] array)
     {
-        int temp;
         for (int i = 0; i < array.Length; i++)
         {
             for (int j = 0; j < array.Length - 1; j++)
             {
                 if (array[j] > array[j + 1])
                 {
-                    temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    (array[j], array[j + 1]) = (array[j + 1], array[j]);
                 }
             }
         }
     }
 
-    public void PrintSortingArray(int[] array)
+    void PrintArray(int[] array)
     {
-        Console.Write("\nAn array arranged in ascending order: ");
         for (int i = 0; i < array.Length; i++)
         {
             if (i == array.Length - 1)
