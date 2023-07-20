@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task7 task7 = new Task7();
-task7.AscendingOrderArrayTests();
+Task9 task9 = new Task9();
+task9.FindMinMaxArrayTests();
