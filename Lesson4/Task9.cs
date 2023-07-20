@@ -20,11 +20,11 @@ public class Task9
             array[i] = Convert.ToDouble(Console.ReadLine());
         }
 
-        double printMin = FindMinElement(array);
-        Console.Write("The minimum element of the array: " + printMin);
+        double minimumElement = FindMinElement(array);
+        Console.Write("The minimum element of the array: " + minimumElement);
 
-        double printMax = FindMaxElement(array);
-        Console.Write("\nThe maximum element of the array: " + printMax);
+        double maximumElement = FindMaxElement(array);
+        Console.Write("\nThe maximum element of the array: " + maximumElement);
     }
 
     double FindMinElement(double[] array)
