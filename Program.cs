@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task9 task9 = new Task9();
-task9.FindMinMaxElementTests();
+Task10 task10 = new Task10();
+task10.FindOddAndEvenElementsTests();
