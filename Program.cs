@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task10 task10 = new Task10();
-task10.FindOddAndEvenElementsTests();
+Task11 task11 = new Task11();
+task11.SortArrayElementsTests();
