@@ -2,7 +2,7 @@ namespace CSharpFundamentals.Lesson4;
 
 public class Task14
 {
-    public void SecondLargestElementTests()
+    public void FindSecondMaximumTest()
     {
         try
         {
@@ -26,7 +26,7 @@ public class Task14
             Print(array);
 
             Console.Write("\n2nd largest element of the array: ");
-            int secondLarge = FindSecondLargestElement(array);
+            int secondLarge = FindSecondMaximum(array);
 
             Console.Write(secondLarge);
         }
@@ -37,38 +37,26 @@ public class Task14
         }
     }
 
-    int FindSecondLargestElement(int[] array)
+    int FindSecondMaximum(int[] array)
     {
-        int large = 0;
-        int j = 0;
-        
-        for (int i = 0; i < array.Length; i++)
+        int max = int.MinValue;
+        int secodMax = int.MinValue;
+
+        foreach (int num in array)
         {
-            if (large < array[i])
+            if (num > max)
             {
-                large = array[i];
-                j = i;
+                secodMax = max;
+                max = num;
+            }
+            
+            else if (num > secodMax && num < max)
+            {
+                secodMax = num;
             }
         }
 
-        int secondLarge = 0;
-        for (int i = 0; i < array.Length; i++)
-        {
-            if (i == j)
-            {
-                i++;
-                j--;
-            }
-            else
-            {
-                if (secondLarge < array[i])
-                {
-                    secondLarge = array[i];
-                }
-            }
-        }
-
-        return secondLarge;
+        return secodMax;
     }
 
     void Print(int[] array)
