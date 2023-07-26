@@ -26,9 +26,9 @@ public class Task14
             Print(array);
 
             Console.Write("\n2nd largest element of the array: ");
-            int secondLarge = FindSecondMaximum(array);
+            int secondMaximum = FindSecondMaximum(array);
 
-            Console.Write(secondLarge);
+            Console.Write(secondMaximum);
         }
         
         catch (Exception e)
@@ -39,24 +39,24 @@ public class Task14
 
     int FindSecondMaximum(int[] array)
     {
-        int max = array[0];
-        int secondMax = array[0];
+        int maximum = array[0];
+        int secondMaximum = array[0];
 
-        foreach (int num in array)
+        foreach (int item in array)
         {
-            if (num > max)
+            if (item > maximum)
             {
-                secondMax = max;
-                max = num;
+                secondMaximum = maximum;
+                maximum = item;
             }
             
-            else if (num > secondMax && num < max)
+            else if (item > secondMaximum && item < maximum)
             {
-                secondMax = num;
+                secondMaximum = item;
             }
         }
 
-        return secondMax;
+        return secondMaximum;
     }
 
     void Print(int[] array)
