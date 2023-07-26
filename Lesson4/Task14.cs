@@ -39,24 +39,24 @@ public class Task14
 
     int FindSecondMaximum(int[] array)
     {
-        int max = int.MinValue;
-        int secodMax = int.MinValue;
+        int max = array[0];
+        int secondMax = array[0];
 
         foreach (int num in array)
         {
             if (num > max)
             {
-                secodMax = max;
+                secondMax = max;
                 max = num;
             }
             
-            else if (num > secodMax && num < max)
+            else if (num > secondMax && num < max)
             {
-                secodMax = num;
+                secondMax = num;
             }
         }
 
-        return secodMax;
+        return secondMax;
     }
 
     void Print(int[] array)
