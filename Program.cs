@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task13 task13 = new Task13();
-task13.DeleteElementArrayTests();
+Task15 task = new Task15();
+task.FindSecondMinimumTests();
