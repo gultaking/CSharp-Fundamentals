@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task15 task = new Task15();
-task.FindSecondMinimumTests();
+Task16 task16 = new Task16();
+task16.PrintMatrixTests();
