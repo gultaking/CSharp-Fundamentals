@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task14 task14 = new Task14();
-task14.FindSecondMaximumTest();
+Task15 task = new Task15();
+task.FindSecondMinimumTests();
