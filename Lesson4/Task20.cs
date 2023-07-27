@@ -2,7 +2,7 @@ namespace CSharpFundamentals.Lesson4;
 
 public class Task20
 {
-    public void SumNegativeNumbersArrayTests()
+    public void SumOfMinimumsTests()
     {
         try
         {
@@ -26,7 +26,7 @@ public class Task20
             Console.Write("Entered array: ");
             PrintArray(array);
 
-            int result = SumNegativNumbersArray(array);
+            int result = GetSumOfMinimums(array);
             Console.Write("\nSum minimum and second minimum negativ array: " + result);
         }
         catch (Exception e)
@@ -35,36 +35,34 @@ public class Task20
         }
     }
 
-    int SumNegativNumbersArray(int[] array)
+    int GetSumOfMinimums(int[] array)
     {
-        int sum = 0;
+        int sumNegativ = 0;
 
-        int min = array[0];
+        int minNegativ = array[0];
+        
+        int secondMinNegative = array[0];
         
         for (int i = 1; i < array.Length; i++)
         {
-            if (array[i] < min)
+            if (array[i] < minNegativ)
             {
-                min = array[i];
+                secondMinNegative = minNegativ;
+                minNegativ = array[i];
+            }
+            
+            if (array[i] < secondMinNegative && array[i] > minNegativ)
+            {
+                secondMinNegative = array[i];
             }
         }
 
-        int secondMin = array[0];
-        
-        for (int i = 0; i < array.Length; i++)
+        if (minNegativ < 0 && secondMinNegative < 0)
         {
-            if (array[i] < secondMin && array[i] > min)
-            {
-                secondMin = array[i];
-            }
+            sumNegativ = minNegativ + secondMinNegative;
         }
 
-        if (min < 0 && secondMin < 0)
-        {
-            sum = min + secondMin;
-        }
-
-        return sum;
+        return sumNegativ;
     }
 
     void PrintArray(int[] array)
