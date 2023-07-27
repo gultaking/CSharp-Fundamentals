@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task20 task20 = new Task20();
-task20.SumOfMinimumsTests();
+Task22 task22 = new Task22();
+task22.FindEqualsTests();
