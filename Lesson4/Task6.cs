@@ -4,7 +4,7 @@ public class Task6
 {
     public void FindUniqueElementTests()
     {
-        Console.Write("Enter length the array's elements: ");
+        Console.Write("Enter length of the array: ");
         int length = Convert.ToInt32(Console.ReadLine());
 
         if (length <= 0)
@@ -16,38 +16,63 @@ public class Task6
 
         for (int i = 0; i < length; i++)
         {
-            Console.Write("Insert the elements of the array {0}: ", i);
+            Console.Write("Array({0}): ", i);
             array[i] = Convert.ToInt32(Console.ReadLine());
         }
+        
+        Console.Write("Entered array: ");
+        PrintArray(array);
+        
+        Console.WriteLine();
 
-        int[] result = GetUniqueElement(array);
-        PrintUniqueElementArray(result);
-
+        int[] uniqueArray = GetUniqueArray(array);
+        Console.Write("Unique array: ");
+        PrintArray(uniqueArray);
     }
 
-    public int[] GetUniqueElement(int[] array)
+    private int[] GetUniqueArray(int[] array)
     {
-        int[] targetArray = new int [array.Length];
-        
+        int[] targetArray = Array.Empty<int>();
+
         for (int i = 0; i < array.Length; i++)
         {
-            for (int j = i+1; j < array.Length-1; j++)
+            int count = 0;
+            for (int j = 0; j < array.Length - 1; j++)
             {
-                if (array[i] == array[j])
+                if (array[i] == array[j] && i != j)
                 {
-                     
+                    count++;
                 }
+            }
+
+            if (count == 0)
+            {
+                int[] tempArr = new int[targetArray.Length + 1];
+                for (int k = 0; k < targetArray.Length; k++)
+                {
+                    tempArr[k] = targetArray[k];
+                }
+
+                tempArr[targetArray.Length] = array[i];
+                targetArray = tempArr;
             }
         }
 
         return targetArray;
     }
 
-    public void PrintUniqueElementArray(int[] targetArray)
+    private void PrintArray(int[] array)
     {
-        for (int i = 0; i < targetArray.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            Console.Write(targetArray[i]);
+            if (i == array.Length - 1)
+            {
+                Console.Write(array[i]);
+            }
+            else
+            {
+                Console.Write("{0}, ", array[i]);
+            }
         }
     }
 }
