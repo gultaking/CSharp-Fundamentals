@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task19 task19 = new Task19();
-task19.SumRowsAndColumnsArrayTests();
+Task21 task21 = new Task21();
+task21.FindEnteredValueTests();
