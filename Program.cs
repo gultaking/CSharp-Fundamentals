@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task17 task17 = new Task17();
-task17.SumOfArraysTests();
+Task18 task18 = new Task18();
+task18.SubtractionOfArrayTests();
