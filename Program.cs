@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson4;
 
-Task20 task20 = new Task20();
-task20.SumOfMinimumsTests();
+Task6 task6 = new Task6();
+task6.FindUniqueElementTests();
