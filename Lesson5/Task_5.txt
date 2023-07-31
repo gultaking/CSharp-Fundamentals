@@ -1,0 +1,24 @@
+1. Write a program to input a string and print it. 
+2. Write a program to find the length of a string. 
+3. Write a program to find the length of a string without using a library function. 
+4. Write a program to print characters of the string in reverse order. 
+5. Write a program to count the total number of words in a string.
+6. Write a program to compare two strings without using a string library functions. 
+7. Write a program to count the number of alphabets, digits and special characters in a string. 
+8. Write a program to count the number of vowels or consonants in a string. 
+9. Write a program to find the maximum number of characters in a string. 
+10. Write a program to sort a string array in ascending order (Exp.: acdb -> abcd).  
+11. Write a program to extract a substring from a given string without using the library function. 
+12. Write a program to check whether a given substring is present in the given string. 
+13. Write a program to read a sentence and replace lowercase characters with uppercase and vice-versa. 
+14. Write a program to check the username and password. If both of them are right entered then print 
+    "Login Successfully!" message, else ask again.
+15. Write a program to find the number of times a substring appears in a given string. 
+16. Write a program to get the longest Palindromic substring from a given string. 
+17. Write a program to remove duplicate characters from a given string (Exp.: aabbbcccc -> abc ). 
+18. Write a program to find the central character(s) in a given string. Return the middle character 
+    if the string length is odd and return two middle characters if the string length is even. 
+19. Write a program to convert the first character of each word in a given string to uppercase. 
+20. Write a program to print a given non-empty string in compressed format. 
+    (Exp. 1: "kkkktttrrrrrrrrrr" → "k[4]t[3]r[10]", 
+     Exp. 2: "p555ppp7www" → "p[1]5[3]p[3]7[1]w[3]")

@@ -1,5 +1,4 @@
-﻿using CSharpFundamentals.Lesson4;
+﻿using CSharpFundamentals.Lesson5;
 
-
-Task22 task22 = new Task22();
-task22.FindEqualsTests();
+Task1 task1 = new Task1();
+task1.InputStringTests();
