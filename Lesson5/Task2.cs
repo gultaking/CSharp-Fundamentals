@@ -2,16 +2,16 @@ namespace CSharpFundamentals.Lesson5;
 
 public class Task2
 {
-    public void FindLengthStringTests()
+    public void FindStringLengthTests()
     {
         Console.Write("Input string: ");
         string str = Console.ReadLine();
-        
+
         Console.Write("Printed string: ");
         PrintString(str);
-        
+
         Console.Write("\nThe length of string: ");
-        int lengthString = FindLengthString(str);
+        int lengthString = FindLength(str);
         Console.Write(lengthString);
     }
 
@@ -20,7 +20,7 @@ public class Task2
         Console.Write(str);
     }
 
-    int FindLengthString(string str)
+    int FindLength(string str)
     {
         int length = 0;
         foreach (char item in str)
