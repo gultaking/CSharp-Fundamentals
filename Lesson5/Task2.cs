@@ -4,15 +4,27 @@ public class Task2
 {
     public void FindStringLengthTests()
     {
-        Console.Write("Input string: ");
-        string str = Console.ReadLine();
+        try
+        {
+            Console.Write("Input string: ");
+            string str = Console.ReadLine();
 
-        Console.Write("Printed string: ");
-        PrintString(str);
+            if (string.IsNullOrEmpty(str))
+            {
+                throw new Exception("String is null!");
+            }
 
-        Console.Write("\nThe length of string: ");
-        int lengthString = FindLength(str);
-        Console.Write(lengthString);
+            Console.Write("Printed string: ");
+            PrintString(str);
+
+            Console.Write("\nThe length of string: ");
+            int lengthString = FindLength(str);
+            Console.Write(lengthString);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 
     void PrintString(string str)
