@@ -1,6 +1,6 @@
 namespace CSharpFundamentals.Lesson5;
 
-public class Task2
+public class Task3
 {
     public void FindStringLengthTests()
     {
