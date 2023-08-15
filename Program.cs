@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson5;
 
-Task2 task2 = new Task2();
-task2.FindLengthTests();
+Task6 task6 = new Task6();
+task6.StringTests();
