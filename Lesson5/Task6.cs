@@ -17,11 +17,16 @@ public class Task6
                 throw new Exception("String is null or empty!");
             }
 
-            Print(str1, str2);
 
             Console.WriteLine();
+            
+            Console.Write("Entered string: " + str1);
+            Console.WriteLine();
+            Console.Write("Entered string: " + str2);
 
-            bool compare = ComparingStrings(str1, str2);
+            Console.WriteLine();
+            
+            bool compare = CompareStrings(str1, str2);
             Console.Write(compare ? "Strings are equal" : "Strings are not equal");
         }
         catch (Exception e)
@@ -30,16 +35,7 @@ public class Task6
         }
     }
 
-    void Print(string str1, string str2)
-    {
-        Console.Write("Entered string: ");
-        Console.Write(str1);
-        Console.WriteLine();
-        Console.Write("Entered string: ");
-        Console.Write(str2);
-    }
-
-    bool ComparingStrings(string str1, string str2)
+    bool CompareStrings(string str1, string str2)
     {
         if (str1 == str2)
         {
