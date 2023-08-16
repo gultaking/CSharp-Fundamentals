@@ -1,4 +1,5 @@
 namespace CSharpFundamentals.Lesson5;
+
 public class Task7
 {
     public void StringTests()
@@ -6,28 +7,22 @@ public class Task7
         Console.Write("Enter string: ");
         string str = Console.ReadLine();
 
-        Console.Write("Entered string: ");
-        Print(str);
+        Console.Write("Entered string: " + str);
 
         Console.WriteLine();
-        
+
         int alphabetCount = FindCountTheAlphabetInString(str);
         Console.Write("The number of letters in the string: " + alphabetCount);
 
         Console.WriteLine();
-        
+
         int digitsCount = FindCountTheDigitsInString(str);
         Console.Write("The number of digits in the string: " + digitsCount);
 
         Console.WriteLine();
-        
+
         int characterCount = FindCountTheCharacterInString(str);
         Console.Write("The number of special character in the string: " + characterCount);
-    }
-
-    void Print(string str)
-    {
-        Console.Write(str);
     }
 
     int FindCountTheAlphabetInString(string str)
@@ -64,8 +59,8 @@ public class Task7
     {
         int charactersCount = 0;
 
-        char[] character = { '@', '#', '$', '!', '%', '^', '*', '(', ')', '-', '+', '{', '}', ']', '<', '>'};
- 
+        char[] character = { '@', '#', '$', '!', '%', '^', '*', '(', ')', '-', '+', '{', '}', ']', '<', '>', '=',':'};
+
         for (int i = 0; i < str.Length; i++)
         {
             for (int j = 0; j < character.Length; j++)
