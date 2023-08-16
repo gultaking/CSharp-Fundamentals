@@ -4,26 +4,34 @@ public class Task5
 {
     public void StringTests()
     {
-        Console.Write("Enter string: ");
-        string str = Console.ReadLine();
+        try
+        {
+            Console.Write("Enter string: ");
+            string str = Console.ReadLine();
 
-        Console.Write("Entered string: ");
-        Print(str);
+            Console.Write("Entered string: " + str);
 
-        Console.WriteLine();
+            Console.WriteLine();
 
-        int count = CountOfWordsString(str);
-        Console.Write("Count of the words in string: " + count);
-    }
-
-    void Print(string str)
-    {
-        Console.Write(str);
+            int count = CountOfWordsString(str);
+            Console.Write("Count of the words in the string: " + count);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 
     int CountOfWordsString(string str)
     {
+        if (string.IsNullOrEmpty(str))
+        {
+            throw new Exception("String is null or empty!");
+        }
+
         int count = 1;
+
+        str = str.Trim();
 
         for (int i = 0; i < str.Length - 1; i++)
         {
