@@ -9,6 +9,11 @@ public class Task8
             Console.Write("Enter string: ");
             string str = Console.ReadLine();
 
+            if (string.IsNullOrEmpty(str))
+            {
+                throw new Exception("String is null or empty!");
+            }
+
             Console.Write("Entered string: " + str);
 
             Console.WriteLine();
@@ -29,60 +34,61 @@ public class Task8
 
     int FindCountVowels(string str)
     {
-        if (string.IsNullOrEmpty(str))
-        {
-            throw new Exception("String is null or empty!");
-        }
-
         int vowelCount = 0;
-        for (int i = 0; i < str.Length; i++)
+
+        foreach (char symbol in str)
         {
-            switch (str[i])
+            if (IsVowel(symbol))
             {
-                case 'a':
-                case 'o':
-                case 'u':
-                case 'i':
-                case 'e':
-                    vowelCount++;
-                    break;
+                vowelCount++;
             }
         }
 
         return vowelCount;
     }
 
+    bool IsVowel(char symbol)
+    {
+        bool isVowel = false;
+
+        switch (symbol.ToString().ToLower())
+        {
+            case "a":
+            case "o":
+            case "u":
+            case "i":
+            case "e":
+                isVowel = true;
+                break;
+        }
+
+        return isVowel;
+    }
+
+    bool IsLetter(char symbol)
+    {
+        char loweredSymbol = symbol.ToString().ToLower()[0];
+        
+        for (char i = 'a'; i <= 'z'; i++)
+        {
+            if (i == loweredSymbol)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
     int FindCountConsonants(string str)
     {
         int consonantsCount = 0;
 
-        for (int i = 0; i < str.Length; i++)
+        foreach (char symbol in str)
         {
-            switch (str[i])
+            if (IsLetter(symbol) && !IsVowel(symbol))
             {
-                case 'b':
-                case 'c':
-                case 'd':
-                case 'f':
-                case 'g':
-                case 'h':
-                case 'j':
-                case 'k':
-                case 'l':
-                case 'm':
-                case 'n':
-                case 'p':
-                case 'q':
-                case 'r':
-                case 's':
-                case 't':
-                case 'v':
-                case 'w':
-                case 'x':
-                case 'y':
-                case 'z':
-                    consonantsCount++;
-                    break;
+                consonantsCount++;
             }
         }
 
