@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson5;
 
-Task7 task7 = new Task7();
-task7.StringTests();
+Task8 task8 = new Task8();
+task8.StringTests();
