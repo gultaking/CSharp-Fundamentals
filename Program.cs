@@ -1,4 +1,4 @@
-﻿using CSharpFundamentals.Lesson5;
+﻿using CSharpFundamentals.Lesson6;
 
-Task12 task12 = new Task12();
-task12.StringTests();
+Task1 task1 = new Task1();
+task1.CollectionsTests();
