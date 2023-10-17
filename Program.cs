@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task1 task1 = new Task1();
-task1.CollectionsTests();
+Task4 task4 = new Task4();
+task4.RemoveElementInList();
