@@ -9,11 +9,11 @@ public class Task4
             Console.Write("Enter the size of the List: ");
             int size = Convert.ToInt32(Console.ReadLine());
 
-            if (size == 0 || size < 0)
+            if (size <= 0)
             {
                 throw new Exception("Size cannot be zero or negative!");
             }
-            
+
             Console.WriteLine("Enter elements of the List");
             List<string> myList = new List<string>();
 
@@ -28,19 +28,16 @@ public class Task4
 
             if (element == null || !myList.Contains(element))
             {
-                throw new Exception("Element cannot be empty or element not found in List!");
+                throw new Exception("Element cannot be null or element not found in List!");
             }
 
-            if (myList.Contains(element))
+            if (myList.Remove(element))
             {
-                if (myList.Remove(element))
-                {
-                    Console.WriteLine($"Element is removed: {element}");
-                }
-                else
-                {
-                    Console.WriteLine($"Element is not removed: {element}");
-                }
+                Console.WriteLine($"Element is removed: {element}");
+            }
+            else
+            {
+                Console.WriteLine($"Element is not removed: {element}");
             }
 
             Console.WriteLine("Element of the List");
@@ -49,7 +46,7 @@ public class Task4
                 Console.WriteLine(item);
             }
         }
-        
+
         catch (Exception e)
         {
             Console.WriteLine(e.Message);
@@ -63,7 +60,7 @@ public class Task4
             Console.Write("Enter the size of the List: ");
             int size = Convert.ToInt32(Console.ReadLine());
 
-            if (size == 0 || size < 0)
+            if (size <= 0)
             {
                 throw new Exception("Size cannot be zero or negative!");
             }
@@ -80,13 +77,14 @@ public class Task4
             Console.Write("Enter index: ");
             int index = Convert.ToInt32(Console.ReadLine());
 
-            if (index > myList.Count || index < 0)
+            if (index >= myList.Count || index < 0)
             {
-                throw new Exception("Index cannot be less than zero or greater than Count");
+                throw new Exception("Index cannot be less than zero or greater than or equal to Count");
             }
 
             myList.RemoveAt(index);
-
+            Console.WriteLine($"Element with index {index} has been removed");
+            
             Console.WriteLine("Element of the List");
             foreach (int item in myList)
             {
@@ -104,12 +102,12 @@ public class Task4
     {
         Console.Write("Enter the size of Queue: ");
         int size = Convert.ToInt32(Console.ReadLine());
-        
-        if (size == 0 || size < 0)
+
+        if (size <= 0)
         {
             throw new Exception("Size cannot be zero or negative!");
         }
-        
+
         Console.WriteLine("Enter the element of the Queue");
         Queue<int> queue = new Queue<int>();
 
@@ -132,12 +130,12 @@ public class Task4
     {
         Console.Write("Enter the size of Stack: ");
         int size = Convert.ToInt32(Console.ReadLine());
-        
-        if (size == 0 || size < 0)
+
+        if (size <= 0)
         {
             throw new Exception("Size cannot be zero or negative!");
         }
-        
+
         Console.WriteLine("Enter the element of the Stack");
         Stack<double> stack = new Stack<double>();
 
@@ -148,7 +146,7 @@ public class Task4
         }
 
         stack.Pop();
-        
+
         Console.WriteLine("Element of the Stack");
         foreach (double element in stack)
         {
