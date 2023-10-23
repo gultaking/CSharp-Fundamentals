@@ -26,7 +26,7 @@ public class Task3
             Console.Write("Enter index: ");
             int index = Convert.ToInt32(Console.ReadLine());
 
-            if (index < 0 || index > studentNames.Count)
+            if (index < 0 || index >= studentNames.Count)
             {
                 throw new Exception("Index cannot be less than zero or greater than Count");
             }
@@ -35,12 +35,12 @@ public class Task3
             {
                 if (index == i)
                 {
-                    Console.WriteLine(studentNames[i]);
+                    Console.WriteLine($"Element with index {index}: {studentNames[i]}");
                 }
             }
 
             string elementAt = studentNames.ElementAt(index);
-            Console.WriteLine(elementAt);
+            Console.WriteLine($"Element with index {index}: {elementAt}");
         }
         
         catch (Exception e)
@@ -77,7 +77,7 @@ public class Task3
             Console.Write("Enter index: ");
             int index = Convert.ToInt32(Console.ReadLine());
 
-            if (index < 0 || index > dictionary.Count)
+            if (index < 0 || index >= dictionary.Count)
             {
                 throw new Exception("Index cannot be less than zero or greater than Count");
             }
