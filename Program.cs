@@ -1,5 +1,6 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task5 task5 = new Task5();
-task5.IterationForeachOverDictionary();
-task5.IterationForeachOverList();
+Task7 task7 =new Task7();
+task7.SortList();
+task7.SortDictionary();
+task7.SortArrayList();
