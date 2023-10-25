@@ -1,7 +1,6 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task4 task4 = new Task4();
-task4.Remove();
-task4.RemoveAt();
-task4.Dequeue();
-task4.Pop();
+Task6 task6 = new Task6();
+task6.Contains();
+task6.Find();
+task6.FindAll();
