@@ -1,7 +1,6 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task2 task2 = new Task2();
-task2.Add();
-task2.AddRange();
-task2.Push();
-task2.Enqueue();
+Task6 task6 = new Task6();
+task6.Contains();
+task6.Find();
+task6.FindAll();
