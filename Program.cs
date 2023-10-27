@@ -1,6 +1,5 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task7 task7 =new Task7();
-task7.SortList();
-task7.SortDictionary();
-task7.SortArrayList();
+Task8 task8 = new Task8();
+//task8.LinqQueryInList();
+task8.LinqQueryInDictionary();
