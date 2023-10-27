@@ -1,5 +1,5 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task5 task5 = new Task5();
-task5.IterationForeachOverDictionary();
-task5.IterationForeachOverList();
+Task8 task8 = new Task8();
+//task8.LinqQueryInList();
+task8.LinqQueryInDictionary();
