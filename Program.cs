@@ -1,5 +1,7 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task8 task8 = new Task8();
-//task8.LinqQueryInList();
-task8.LinqQueryInDictionary();
+Task9 task9 = new Task9();
+task9.ElementsCountInList();
+task9.ElementsCountInHashTable();
+task9.ElementsCountInArrayList();
+task9.ElementsCountInHashSet();
