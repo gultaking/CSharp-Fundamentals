@@ -1,6 +1,7 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task7 task7 =new Task7();
-task7.SortList();
-task7.SortDictionary();
-task7.SortArrayList();
+Task9 task9 = new Task9();
+task9.ElementsCountInList();
+task9.ElementsCountInHashTable();
+task9.ElementsCountInArrayList();
+task9.ElementsCountInHashSet();
