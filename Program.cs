@@ -2,4 +2,4 @@
 
 Task10 task10 = new Task10();
 task10.TestOfAnyInList();
-task10.AnyTest();
+task10.TestOfAnyInDictionary();

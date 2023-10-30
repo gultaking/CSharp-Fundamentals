@@ -35,34 +35,42 @@ public class Task10
         }
     }
 
-    public void AnyTest()
+    public void TestOfAnyInDictionary()
     {
-        Console.Write("Enter the size of the Dictionary: ");
-        int size = Convert.ToInt32(Console.ReadLine());
-
-        if (size <= 0)
+        try
         {
-            throw new Exception("Size cannot be zero or negative!");
+            Console.Write("Enter the size of the Dictionary: ");
+            int size = Convert.ToInt32(Console.ReadLine());
+
+            if (size <= 0)
+            {
+                throw new Exception("Size cannot be zero or negative!");
+            }
+
+            Console.WriteLine("Enter the elements of the Dictionary");
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write("Enter key: ");
+                string key = Console.ReadLine();
+
+                Console.Write("Enter value: ");
+                string value = Console.ReadLine();
+
+                dictionary.Add(key, value);
+            }
+
+            bool check1 = dictionary.Any();
+            Console.WriteLine(check1);
+
+            bool check2 = dictionary.Any(element => element.Value.StartsWith("S"));
+            Console.WriteLine(check2);
         }
-
-        Console.WriteLine("Enter the elements of the Dictionary");
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-
-        for (int i = 0; i < size; i++)
+        
+        catch (Exception e)
         {
-            Console.Write("Enter key: ");
-            string key = Console.ReadLine();
-
-            Console.Write("Enter value: ");
-            string value = Console.ReadLine();
-
-            dictionary.Add(key, value);
+            Console.WriteLine(e.Message);
         }
-
-        bool check1 = dictionary.Any();
-        Console.WriteLine(check1);
-
-        bool check2 = dictionary.Any(element => element.Value.StartsWith("S"));
-        Console.WriteLine(check2);
     }
 }
