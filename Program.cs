@@ -1,4 +1,5 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task11 task11 = new Task11();
-task11.ClearMethodInList();
+Task13 task13 = new Task13();
+task13.Concat();
+task13.Union();
