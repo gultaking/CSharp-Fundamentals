@@ -1,4 +1,6 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task11 task11 = new Task11();
-task11.ClearMethodInList();
+Task14 task14 = new Task14();
+task14.ToList();
+task14.ToArray();
+task14.ToDictionary();
