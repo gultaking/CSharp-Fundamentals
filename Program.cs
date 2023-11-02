@@ -1,4 +1,4 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task11 task11 = new Task11();
-task11.ClearMethodInList();
+Task15 task15 = new Task15();
+task15.Sort();
