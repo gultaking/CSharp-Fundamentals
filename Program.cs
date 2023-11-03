@@ -1,6 +1,6 @@
 ﻿using CSharpFundamentals.Lesson6;
 
-Task14 task14 = new Task14();
-task14.ToList();
-task14.ToArray();
-task14.ToDictionary();
+Task17 task17 = new Task17();
+task17.TryGetValueInDictionary();
+task17.AddInDictionary();
+task17.RemoveInDictionary();
